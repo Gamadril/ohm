@@ -21,23 +21,8 @@
   "bin": "src/ohm-cmd.js",
   "types": "index.d.ts",
   "scripts": {
-    "prebootstrap": "bash bin/prebootstrap",
-    "bootstrap": "bash bin/bootstrap --test || (echo 'Bootstrap failed.' && mv -v dist/ohm-grammar.js.old dist/ohm-grammar.js && mv -v dist/built-in-rules.js.old dist/built-in-rules.js && mv -v dist/operations-and-attributes.js.old dist/operations-and-attributes.js)",
-    "build": "node bin/build-debug.js && uglifyjs dist/ohm.js > dist/ohm.min.js",
-    "prebuild-debug": "bash bin/update-env.sh",
-    "build-debug": "bash bin/build-debug.sh",
-    "ci-test": "npm run lint && npm test && ts-node test/test-typings.ts",
-    "clean": "rm -f dist/ohm.js dist/ohm.min.js",
-    "deploy-gh-pages": "bin/deploy-gh-pages.sh",
-    "lint": "eslint .",
     "pretest": "bash bin/update-env.sh",
-    "test": "tape 'test/**/*.js' | tap-spec",
-    "test-watch": "bash bin/test-watch",
-    "postinstall": "node bin/dev-setup.js",
-    "prepublishOnly": "npm run lint && npm run build && npm run bootstrap",
-    "unsafe-bootstrap": "bash bin/bootstrap",
-    "visualizer": "bash bin/ohm-visualizer",
-    "watch": "bash bin/watch.sh"
+    "test": "tape 'test/**/*.js' | tap-spec"
   },
   "license": "MIT",
   "author": "Alex Warth <alexwarth@gmail.com> (http://tinlizzie.org/~awarth)",
@@ -91,8 +76,5 @@
     "uglify-js": "^2.7.5",
     "walk-sync": "^0.3.1",
     "watchify": "^3.8.0"
-  },
-  "engines": {
-    "node": ">=0.12.1"
   }
 }
