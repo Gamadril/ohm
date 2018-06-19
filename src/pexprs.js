@@ -6,7 +6,7 @@
 
 var UnicodeCategories = require('../third_party/UnicodeCategories');
 var common = require('./common');
-var inherits = require('inherits');
+var inherits = require('util').inherits;
 
 // --------------------------------------------------------------------
 // Private stuff

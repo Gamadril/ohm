@@ -15,8 +15,6 @@ var pexprs = require('./pexprs');
 var util = require('./util');
 var version = require('./version');
 
-var isBuffer = require('is-buffer');
-
 // --------------------------------------------------------------------
 // Private stuff
 // --------------------------------------------------------------------
@@ -292,7 +290,7 @@ function grammars(source, optNamespace) {
   var ns = Namespace.extend(Namespace.asNamespace(optNamespace));
   if (typeof source !== 'string') {
     // For convenience, detect Node.js Buffer objects and automatically call toString().
-    if (isBuffer(source)) {
+    if (Buffer.isBuffer(source)) {
       source = source.toString();
     } else {
       throw new TypeError(

@@ -7,7 +7,7 @@
 var Failure = require('./Failure');
 var TerminalNode = require('./nodes').TerminalNode;
 var assert = require('./common').assert;
-var inherits = require('inherits');
+var inherits = require('util').inherits;
 var pexprs = require('./pexprs');
 
 function CaseInsensitiveTerminal(param) {

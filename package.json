@@ -34,7 +34,6 @@
     "test": "tape 'test/**/*.js' | tap-spec",
     "test-watch": "bash bin/test-watch",
     "postinstall": "node bin/dev-setup.js",
-    "precommit": "npm run prepublishOnly",
     "prepublishOnly": "npm run lint && npm run build && npm run bootstrap",
     "unsafe-bootstrap": "bash bin/bootstrap",
     "visualizer": "bash bin/ohm-visualizer",
@@ -68,9 +67,6 @@
     "owch <bowenrainyday@gmail.com>"
   ],
   "dependencies": {
-    "es6-symbol": "^3.1.0",
-    "inherits": "^2.0.3",
-    "is-buffer": "^1.1.4",
     "util-extend": "^1.0.3"
   },
   "devDependencies": {

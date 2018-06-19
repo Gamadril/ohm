@@ -4,8 +4,7 @@
 // Imports
 // --------------------------------------------------------------------
 
-var Symbol = require('es6-symbol');  // eslint-disable-line no-undef
-var inherits = require('inherits');
+var inherits = require('util').inherits;
 
 var InputStream = require('./InputStream');
 var IterationNode = require('./nodes').IterationNode;
