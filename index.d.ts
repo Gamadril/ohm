@@ -34,10 +34,11 @@ declare namespace ohm {
    * If namespace is specified, it will be the prototype of the new
    * Namespace.
    */
+  /*
   function grammarFromScriptElements(
     nodeList?: NodeList,
     namespace?: Namespace): Namespace;
-
+  */
   /**
    * Create a new namespace. If props is specified, all of its properties
    * will be copied to the new namespace.
