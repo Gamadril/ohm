@@ -16,7 +16,7 @@ declare namespace ohm {
    * If specified, namespace is
    * the Namespace to use when resolving external references in the grammar.
    */
-  function grammarFromScriptElement(node?: Node, namespace?: Namespace): Grammar;
+  /*function grammarFromScriptElement(node?: Node, namespace?: Namespace): Grammar;*/
 
   /**
    * Create a new Namespace containing Grammar instances for all of the
